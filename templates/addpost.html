@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+{% block body %}
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('http://elegirhoy.com/uploads/fichas-eventos-imagenes/blog.jpg')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="site-heading">
+              <h1>ADMIN PANEL</h1>
+              <span class="subheading">MANAGE YOUR BLOGPOSTS HERE</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+            <a href="/loginDashboard"><td><button class="btn btn-info " >DASHBOARD</button></td></a>
+            <a href="/logout"><td><button class="btn btn-info " >LOGOUT</button></td></a>
+
+            <h1>ADD A NEW POST</h1>
+       <form name="sentMessage" id="contactForm" action="/add/{{sno}}" method="post" novalidate>
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls">
+                <label>title</label>
+                <input type="text" name="title"  class="form-control" placeholder="title"  required data-validation-required-message="Please enter your name.">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls">
+                <label>tagline</label>
+                <input type="text" name="sub_heading"  class="form-control" placeholder="tagline" required data-validation-required-message="Please enter your email address.">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="form-group col-xs-12 floating-label-form-group controls">
+                <label>slug</label>
+                <input type="text" name="slug"  class="form-control" placeholder="slug" required data-validation-required-message="Please enter your phone number.">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls">
+                <label>content</label>
+                <input type="text" name="content"  class="form-control" placeholder="content" required data-validation-required-message="Please enter a message.">
+                  <p class="help-block text-danger"></p>
+              </div>
+            </div>
+           <div class="control-group">
+              <div class="form-group floating-label-form-group controls">
+                <label>Image File</label>
+                  <input type="text" name="img_file"  class="form-control" placeholder="Image File"  required data-validation-required-message="Please enter a message.">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+            <br>
+            <div id="success"></div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary" id="sendMessageButton">Send</button>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+{% endblock %}

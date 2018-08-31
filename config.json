@@ -1,0 +1,19 @@
+{
+  "params":
+  {
+    "local_server":"True",
+    "local_uri":"mysql://root:@localhost/pythonblog",
+    "prod_uri":"mysql://root:@localhost/pythonblog",
+    "blog_name":"The Python Blog",
+    "tag_line":"A Blog Where You Become Pythonista",
+    "gmail-user":"shubhamg2595@gmail.com",
+    "gmail-pwd":"shubhamg251995",
+     "posted_by":"Shubham Gupta",
+    "sub_heading":"you can add sub_heading here",
+    "no_of_posts":2,
+    "login_image":"python.png",
+    "admin_user":"Shubham",
+    "admin_password":"7042278829",
+    "upload_location":"C:\\Users\\shubham.gupta\\PycharmProjects\\Blog\\static\\file_upload"
+  }
+}
